@@ -52,7 +52,7 @@ export function App() {
                   Planet Mapper
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Worlds upon worlds...
+                  Space tells matter how to move; matter tells space how to curve
                 </Typography>
               </CardContent>
             </div>
