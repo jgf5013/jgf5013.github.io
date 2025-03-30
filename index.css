@@ -1,9 +1,10 @@
 :root {
-    --theme-light-foreground: #151E27;
+    --theme-light-foreground: #16171D;
     --theme-light-background: #F9F6EE;
 
     --theme-dark-foreground: #F9F6EE;
-    --theme-dark-background: #151E27;
+    --theme-dark-background: #16171D;
+    --theme-dark-background-secondary: #1E2029;
 }
 
 body {
@@ -11,18 +12,15 @@ body {
     background-color: var(--theme-light-background);
 }
 
-g {
+/* g {
     fill: var(--theme-light-foreground);
-}
+} */
 
 
 @media (prefers-color-scheme: dark) {
     body {
         color: var(--theme-dark-foreground);
         background-color: var(--theme-dark-background);
-    }
-    g {
-        fill: var(--theme-dark-foreground);
     }
 }
 
@@ -59,11 +57,13 @@ img {
     cursor: pointer;
     border-radius: 5px;
     flex: 1 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        box-shadow: none;
+        background-color: var(--theme-dark-background-secondary);
     }
 }
 
