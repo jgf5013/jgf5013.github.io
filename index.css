@@ -1,7 +1,36 @@
+:root {
+    --theme-light-foreground: #151E27;
+    --theme-light-background: #F9F6EE;
+
+    --theme-dark-foreground: #F9F6EE;
+    --theme-dark-background: #151E27;
+}
+
+body {
+    color: var(--theme-light-foreground);
+    background-color: var(--theme-light-background);
+}
+
+g {
+    fill: var(--theme-light-foreground);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--theme-dark-foreground);
+        background-color: var(--theme-dark-background);
+    }
+    g {
+        fill: var(--theme-dark-foreground);
+    }
+}
+
 .app {
     text-align: center;
     height: 100%;
 }
+
 
 .app-header {
     height: 10%;
@@ -25,12 +54,17 @@ img {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     min-width: 150px;
     margin: 0.5rem;
     cursor: pointer;
     border-radius: 5px;
     flex: 1 1;
+}
+
+@media (prefers-color-scheme: light) {
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
 }
 
 .typography {
