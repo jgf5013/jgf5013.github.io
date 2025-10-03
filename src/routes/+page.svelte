@@ -17,7 +17,7 @@
     title: "WASM Virus Simulation",
     description: "A collaborative project",
     imgSrc: "images/wasm.svg",
-    link: "https://jgf5013.github.io/virus-visualization/"
+    link: "https://jgf5013.github.io/r-virus/"
   }, {
     title: "Planet Mapper",
     description: "Space tells matter how to move; matter tells space how to curve",
