@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/images/add.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>John Fisher: UI Portfolio</title>
+		%sveltekit.head%
+
+		<style>
+			:root {
+				--theme-light-foreground: #16171D;
+				--theme-light-background: #F9F6EE;
+
+				--theme-dark-foreground: #F9F6EE;
+				--theme-dark-background: #16171D;
+				--theme-dark-background-secondary: #1E2029;
+			}
+
+			body {
+					color: var(--theme-light-foreground);
+					background-color: var(--theme-light-background);
+			}
+
+
+			@media (prefers-color-scheme: dark) {
+					body {
+							color: var(--theme-dark-foreground);
+							background-color: var(--theme-dark-background);
+					}
+			}
+		</style>
+	</head>
+	<body>
+		<div>%sveltekit.body%</div>
+	</body>
+</html>
