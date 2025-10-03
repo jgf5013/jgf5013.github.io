@@ -34,12 +34,10 @@
     imgSrc: "images/add.svg",
     link: "https://drive.google.com/file/d/1Xpm5a1sKcmG2HNjvBtWTSddkmdaz-QkX/view?usp=sharing"
   }];
-
-  const name = "John Fisher";
 </script>
 <main class="app">
   <h1 class="app-header typography">
-    {name.toUpperCase()}
+    JOHN FISHER
   </h1>
   <div id="projectsContainer">
     {#each projects as project}
