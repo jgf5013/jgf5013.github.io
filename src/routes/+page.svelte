@@ -43,7 +43,7 @@
   </h1>
   <div id="projectsContainer">
     {#each projects as project}
-      <div tabindex="0" role="button" class="card" on:keyup={(e) => e.key === 'Enter' && window.open(project.link)} on:click={() => window.open(project.link)}>
+      <div tabindex="0" role="button" class={["card", project.title === 'Request' && 'add']} on:keyup={(e) => e.key === 'Enter' && window.open(project.link)} on:click={() => window.open(project.link)}>
         <div class="card-wrapper">
           <div class="img-container">
             <img alt="" src="{project.imgSrc}" title="{project.title}" />
