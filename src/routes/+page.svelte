@@ -1,87 +1,62 @@
+<script lang="ts">
+
+  type Project = {
+    title: string;
+    description: string;
+    imgSrc: string;
+    link: string;
+    date?: number;
+  };
+  const projects: Project[] = [{
+    title: "Virus Simulation",
+    description: "Why do I need to stay inside??",
+    imgSrc: "images/virus.svg",
+    link: "https://jgf5013.github.io/virus-visualization/",
+    date: 1625104380000,
+  }, {
+    title: "WASM Virus Simulation",
+    description: "A collaborative project",
+    imgSrc: "images/wasm.svg",
+    link: "https://jgf5013.github.io/virus-visualization/"
+  }, {
+    title: "Planet Mapper",
+    description: "Space tells matter how to move; matter tells space how to curve",
+    imgSrc: "images/planet-mapper.svg",
+    link: "https://jgf5013.github.io/planet-mapper/",
+  }, {
+    title: "Staff Tools",
+    description: "Hey John, I'm seeing something weird...",
+    imgSrc: "images/staff.svg",
+    link: "https://jgf5013.github.io/angular-mono-repo/"
+  }, {
+    title: "Request",
+    description: "Check out my resume. Send me an email If you're interested in connecting or would like to see me build something interesting!",
+    imgSrc: "images/add.svg",
+    link: "https://drive.google.com/file/d/1Xpm5a1sKcmG2HNjvBtWTSddkmdaz-QkX/view?usp=sharing"
+  }];
+
+  const name = "John Fisher";
+</script>
 <main class="app">
   <h1 class="app-header typography">
-    JOHN FISHER
+    {name.toUpperCase()}
   </h1>
   <div id="projectsContainer">
-    <div class="card" onclick="window.open('https:\/\/jgf5013.github.io/virus-visualization/');">
-      <div class="card-wrapper">
-        <div class="img-container">
-          <img component="img" alt=""
-            src="images/virus.svg"
-            title="Virus" />
-        </div>
-        <div>
-          <h5>
-            Virus Simulation
-          </h5>
-          <p class="typography">Why do I need to stay inside??</p>
-        </div>
-      </div>
-      <div>
-        <p class="typography">4 years ago</p>
-      </div>
-    </div>
-    <div class="card" onclick="window.open('https:\/\/jgf5013.github.io/virus-visualization/');">
-      <div class="card-wrapper">
-        <div class="img-container">
-          <img component="img" alt=""
-            src="images/wasm.svg"
-            title="Virus" />
-        </div>
-        <div>
-          <h5>
-            WASM Virus Simulation
-          </h5>
-          <p class="typography">A collaborative project</p>
-        </div>
-      </div>
-    </div>
-    <div class="card" onclick="window.open('https:\/\/jgf5013.github.io/planet-mapper/');">
-      <div class="card-wrapper" >
-        <div class="img-container">
-          <img component="img" alt=""
-            src="images/planet-mapper.svg"
-            title="Orbit" />
+    {#each projects as project}
+      <div tabindex="0" role="button" class="card" on:keyup={(e) => e.key === 'Enter' && window.open(project.link)} on:click={() => window.open(project.link)}>
+        <div class="card-wrapper">
+          <div class="img-container">
+            <img alt="" src="{project.imgSrc}" title="{project.title}" />
+          </div>
           <div>
             <h5>
-              Planet Mapper
+              {project.title}
             </h5>
-            <p class="typography">Space tells matter how to move; matter tells space how to curve</p>
-            <p class="typography"><small>(lots of data... may take a second to load)</small></p>
+            <p class="typography">{project.description}</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card" onclick="window.open('https:\/\/jgf5013.github.io/angular-mono-repo/');">
-      <div class="card-wrapper">
-        <div class="img-container">
-          <img component="img" alt=""
-            src="images/staff.svg"
-            title="Staff" />
-        </div>
-        <div>
-          <h5>
-            Staff Tools
-          </h5>
-          <p class="typography">Hey John, I'm seeing something weird...</p>
-        </div>
-      </div>
-    </div>
-    <div class="card add" onclick="window.open('https:\/\/drive.google.com/file/d/1Xpm5a1sKcmG2HNjvBtWTSddkmdaz-QkX/view?usp=sharing');">
-      <div class="card-wrapper">
-        <div class="img-container">
-          <img component="img" alt=""
-            src="images/add.svg"
-            title="Add" />
-        </div>
-        <div>
-          <h5>
-            Request
-          </h5>
-          <p class="typography">Check out my resume. Send me an email If you're interested in connecting or would like to see me build something interesting!</p>
-        </div>
-      </div>
-    </div>
+    {/each}
   </div>
 </main>
 
