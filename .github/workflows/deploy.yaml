@@ -24,6 +24,8 @@ jobs:
         run: npm ci
 
       - name: build
+        env:
+          BASE_PATH: '/portfolio'
         run: |
           npm run build
 

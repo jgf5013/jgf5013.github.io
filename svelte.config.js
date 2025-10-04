@@ -10,7 +10,10 @@ const config = {
 		adapter: adapter({
 			fallback: 'app.html',
 			pages: 'build/',
-		})
+		}),
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		}
 	},
 	preprocess: sveltePreprocess()
 };
