@@ -7,6 +7,7 @@
     "url": "git+https://github.com/jgf5013/jgf5013.github.io.git"
   },
   "scripts": {
+    "postinstall": "svelte-kit sync",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
